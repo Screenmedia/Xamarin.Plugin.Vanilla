@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla", "Screenmedia.Plugin.Vanilla\Screenmedia.Plugin.Vanilla.csproj", "{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.iOS", "Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj", "{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Droid", "Screenmedia.Plugin.Vanilla.Droid\Screenmedia.Plugin.Vanilla.Droid.csproj", "{81D3B0D4-148D-477C-A85F-D1119C2F6934}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
