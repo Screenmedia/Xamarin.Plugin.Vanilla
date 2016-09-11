@@ -47,12 +47,12 @@
 	</metadata>
 	<files>		
 		<!-- src -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\**\*.cs" 
+		<!-- <file src="..\src\Screenmedia.Plugin.Vanilla\**\*.cs" 
 			target="src\Screenmedia.Plugin.Vanilla" />
 		<file src="..\src\Screenmedia.Plugin.Vanilla.Droid\**\*.cs" 
 			target="src\Screenmedia.Plugin.Vanilla.Droid" />
 		<file src="..\src\Screenmedia.Plugin.Vanilla.iOS\**\*.cs" 
-			target="src\Screenmedia.Plugin.Vanilla.iOS" />	
+			target="src\Screenmedia.Plugin.Vanilla.iOS" />	 -->
 
 		<!-- PCL -->
 		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\portable-net45+win+wpa81+wp80" />
