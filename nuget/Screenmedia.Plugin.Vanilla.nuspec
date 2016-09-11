@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>Screenmedia.Plugins.Vanilla</id>
+		<id>Screenmedia.Plugin.Vanilla</id>
 		<version>0.0.1</version>
 		<title>Screenmedia Plugin Template - Device Capabilities Plugin</title>
 		<authors>Screenmedia</authors>
