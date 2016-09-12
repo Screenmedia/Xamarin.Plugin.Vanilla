@@ -20,6 +20,25 @@ Build Status:
 |Windows 10 UWP|No||
 |Xamarin.Mac|No||
 
+
+### API Usage
+```csharp
+public interface IIceCreamMachine
+{
+// returns the ice cream
+	string Dispense();
+}
+```
+
+### Usage
+* Resolve the Ice Cream Machine
+* Call Dispense() to get the Ice Cream for that platform
+```csharp
+_iceCreamMachine = Mvx.Resolve<IIceCreamMachine>();
+IceCream = _iceCreamMachine.Dispense();
+```
+
+
 Moar Plugins!!! 
 Moar Shared Code!!!
 Moar Awesome Apps!!!
