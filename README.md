@@ -6,7 +6,7 @@ Use this as a starting point for creating a plugin. This template is a mvvmcross
 * Add setup instructions here
 
 Build Status: 
-* [![Build status](https://ci.appveyor.com/api/projects/status/3gdni80086052e7o/branch/master?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla/branch/master) 
+[![Build status](https://ci.appveyor.com/api/projects/status/3gdni80086052e7o/branch/master?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla/branch/master) 
 
 **Platform Support**
 
