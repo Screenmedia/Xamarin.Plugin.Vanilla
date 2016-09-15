@@ -11,7 +11,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Template Plugin</description>
 		<tags>mvvm mvvmcross cross xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia</tags>
-		<iconUrl>https://github.com/Screenmedia/Plugin.Vanilla/blob/master/art/screenmedia_logo_32.png</iconUrl>
+		<iconUrl>https://avatars0.githubusercontent.com/u/21346456?v=3&s=64</iconUrl>
 		<dependencies>
 			<group targetFramework="net">
 				<dependency id="MvvmCross.Platform" version="4.2.3" />
