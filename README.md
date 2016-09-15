@@ -1,12 +1,10 @@
 # Screenmedia Vanilla Plugin Template
+[![Build status](https://ci.appveyor.com/api/projects/status/3gdni80086052e7o/branch/master?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla/branch/master) 
 
 Use this as a starting point for creating a plugin. This template is a mvvmcross plugins but the folder structure should be universal. 
 
 ### Setup
 * Add setup instructions here
-
-Build Status: 
-[![Build status](https://ci.appveyor.com/api/projects/status/3gdni80086052e7o/branch/master?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla/branch/master) 
 
 **Platform Support**
 
