@@ -4,7 +4,7 @@
 Use this as a starting point for creating a plugin. This template is a mvvmcross plugins but the folder structure should be universal. 
 
 ### Setup
-* Add setup instructions here
+* Install this plugin in the Core and Platform projects.
 
 **Platform Support**
 
