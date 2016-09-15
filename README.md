@@ -22,7 +22,7 @@ Use this as a starting point for creating a plugin. This template is a mvvmcross
 ```csharp
 public interface IIceCreamMachine
 {
-// returns the ice cream
+	// returns the ice cream
 	string Dispense();
 }
 ```
