@@ -13,47 +13,10 @@
 		<tags>mvvm mvvmcross cross xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia</tags>
 		<iconUrl>https://github.com/Screenmedia/Plugin.Vanilla/blob/master/art/screenmedia_logo_64.png</iconUrl>
 		<dependencies>
-			<group targetFramework="net">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="win">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="wp">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="wpa">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="MonoAndroid">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="Xamarin.Mac20">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="Xamarin.iOS10">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="portable-net45+win8+wpa81+wp8">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="uap">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
-			<group targetFramework="dotnet">
-				<dependency id="MvvmCross.Platform" version="4.2.3" />
-			</group>
+			<dependency id="MvvmCross.Platform" version="4.2.3" />
 		</dependencies>
 	</metadata>
 	<files>		
-		<!-- src -->
-		<!-- <file src="..\src\Screenmedia.Plugin.Vanilla\**\*.cs" 
-			target="src\Screenmedia.Plugin.Vanilla" />
-		<file src="..\src\Screenmedia.Plugin.Vanilla.Droid\**\*.cs" 
-			target="src\Screenmedia.Plugin.Vanilla.Droid" />
-		<file src="..\src\Screenmedia.Plugin.Vanilla.iOS\**\*.cs" 
-			target="src\Screenmedia.Plugin.Vanilla.iOS" />	 -->
-
 		<!-- PCL -->
 		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\portable-net45+win+wpa81+wp80" />
 
