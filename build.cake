@@ -4,7 +4,6 @@ var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
 var packageName =  "Screenmedia.Plugin.Vanilla";
-var version = isJenkinsBuild ? EnvironmentVariable ("0.0." + Jenkins.Environment.Build.BuildNumber) ?? Argument("version", "0.0.9999") : EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
 
 var libraries = new Dictionary<string, string> {
  	{ "./src/Screenmedia.Plugin.Vanilla.sln", "Any" },
@@ -72,6 +71,15 @@ Task ("NuGet")
     if(!DirectoryExists("./Build/nuget/"))
         CreateDirectory("./Build/nuget");
         
+	var version = "0.0.9999";
+	if(isJenkinsBuild)
+	{
+		version = EnvironmentVariable ("0.0." + Jenkins.Environment.Build.BuildNumber) ?? Argument("version", "0.0.9999");
+	}
+	else
+	{
+		version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
+	}
 	NuGetPack ("./nuget/" + packageName + ".nuspec", new NuGetPackSettings { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
