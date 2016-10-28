@@ -3,7 +3,7 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var packageName = EnvironmentVariable ("Screenmedia.Plugin.Vanilla");
+var packageName =  "Screenmedia.Plugin.Vanilla";
 var version = isJenkinsBuild ? EnvironmentVariable ("0.0." + Jenkins.Environment.Build.BuildNumber) ?? Argument("version", "0.0.9999") : EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
 
 var libraries = new Dictionary<string, string> {
@@ -86,8 +86,8 @@ Task ("NuGet")
 	            
 		// Push the package.
 		NuGetPush(package, new NuGetPushSettings {
-	    	Source = Jenkins.Environment.GetEnvironmentString("MYGET_SERVER"),
-	    	ApiKey = Jenkins.Environment.GetEnvironmentString("MYGET_APIKEY")
+	    	Source = EnvironmentVariable("MYGET_SERVER"),
+	    	ApiKey = EnvironmentVariable("MYGET_APIKEY")
 		});
 	}
 });
