@@ -82,7 +82,7 @@ Task ("NuGet")
     if(isJenkinsBuild)
     {
 		// Get the path to the package.
-		var package = "./Build/nuget/" + packageName + ".0.0." + version + ".nupkg";
+		var package = "./Build/nuget/" + packageName + version + ".nupkg";
 	            
 		// Push the package.
 		NuGetPush(package, new NuGetPushSettings {
