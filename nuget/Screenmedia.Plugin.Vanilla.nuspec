@@ -18,23 +18,23 @@
 	</metadata>
 	<files>		
 		<!-- PCL -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\portable-net45+win+wpa81+wp80" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\portable-net45+win+wpa81+wp80" />
 
 		<!-- dotnet -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\dotnet" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\dotnet" />
 
 		<!-- droid -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\MonoAndroid" />
-		<file src="..\src\Screenmedia.Plugin.Vanilla.Droid\bin\Release\Screenmedia.Plugin.Vanilla.Droid.*" target="lib\MonoAndroid" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\MonoAndroid" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Droid\bin\Release\Screenmedia.Plugin.Vanilla.Droid.*" target="lib\MonoAndroid" />
 		<file src="BootstrapContent\VanillaPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\VanillaPluginBootstrap.cs.pp" />
 
 		<!-- iOS -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.iOS10" />
-		<file src="..\src\Screenmedia.Plugin.Vanilla.iOS\bin\Release\Screenmedia.Plugin.Vanilla.iOS.*" target="lib\Xamarin.iOS10" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.iOS10" />
+		<file src="src\Screenmedia.Plugin.Vanilla.iOS\bin\Release\Screenmedia.Plugin.Vanilla.iOS.*" target="lib\Xamarin.iOS10" />
 		<file src="iOSBootstrapContent\VanillaPluginBootstrap.cs.pp" target="content\Xamarin.iOS10\Bootstrap\VanillaPluginBootstrap.cs.pp" />
 		
 		<!-- mac -->
-		<file src="..\src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.Mac20" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.Mac20" />
 
 	</files>
 </package>
