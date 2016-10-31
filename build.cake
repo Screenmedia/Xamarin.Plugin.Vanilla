@@ -89,17 +89,15 @@ Task ("NuGet")
 		BasePath = "./",
 	});	
 
-    if(isJenkinsBuild)
-    {
-		// Get the path to the package.
-		var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
-	            
-		// Push the package.
-		NuGetPush(package, new NuGetPushSettings {
-	    	Source = EnvironmentVariable("MYGET_SERVER"),
-	    	ApiKey = EnvironmentVariable("MYGET_APIKEY")
-		});
-	}
+	// publish
+	// Get the path to the package.
+	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
+			
+	// Push the package.
+	NuGetPush(package, new NuGetPushSettings {
+		Source = EnvironmentVariable("MYGET_SERVER"),
+		ApiKey = EnvironmentVariable("MYGET_APIKEY")
+	});
 });
 
 //Build the build samples, nugets, and libraries
