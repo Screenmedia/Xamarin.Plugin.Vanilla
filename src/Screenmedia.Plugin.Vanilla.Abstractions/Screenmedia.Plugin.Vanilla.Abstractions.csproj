@@ -3,14 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}</ProjectGuid>
+    <ProjectGuid>{88E53FD9-91CC-486A-B815-837B7E55132C}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
-    <RootNamespace>Screenmedia.Plugin.Vanilla</RootNamespace>
-    <AssemblyName>Screenmedia.Plugin.Vanilla</AssemblyName>
+    <RootNamespace>Screenmedia.Plugin.Vanilla.Abstractions</RootNamespace>
+    <AssemblyName>Screenmedia.Plugin.Vanilla.Abstractions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,13 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IceCreamMachine.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
-      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
-      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
-    </ProjectReference>
+    <Compile Include="IIceCreamMachine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

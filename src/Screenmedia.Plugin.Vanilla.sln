@@ -5,7 +5,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.iOS", "Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj", "{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Droid", "Screenmedia.Plugin.Vanilla.Droid\Screenmedia.Plugin.Vanilla.Droid.csproj", "{81D3B0D4-148D-477C-A85F-D1119C2F6934}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Abstractions", "Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj", "{88E53FD9-91CC-486A-B815-837B7E55132C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Android", "Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj", "{81D3B0D4-148D-477C-A85F-D1119C2F6934}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E53FD9-91CC-486A-B815-837B7E55132C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E53FD9-91CC-486A-B815-837B7E55132C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E53FD9-91CC-486A-B815-837B7E55132C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E53FD9-91CC-486A-B815-837B7E55132C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Release|Any CPU.ActiveCfg = Release|Any CPU

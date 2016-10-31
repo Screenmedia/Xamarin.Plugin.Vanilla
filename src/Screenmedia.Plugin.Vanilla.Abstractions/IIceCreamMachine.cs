@@ -1,4 +1,4 @@
-﻿namespace Screenmedia.Plugin.Vanilla
+﻿namespace Screenmedia.Plugin.Vanilla.Abstractions
 {
 	public interface IIceCreamMachine
 	{

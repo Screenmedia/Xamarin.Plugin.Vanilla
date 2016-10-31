@@ -1,4 +1,6 @@
-﻿namespace Screenmedia.Plugin.Vanilla.Droid
+﻿using Screenmedia.Plugin.Vanilla.Abstractions;
+
+namespace Screenmedia.Plugin.Vanilla
 {
 	public class IceCreamMachine : IIceCreamMachine
 	{

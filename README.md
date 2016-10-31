@@ -1,7 +1,7 @@
 # Screenmedia Vanilla Plugin Template
 [![Build status](https://ci.appveyor.com/api/projects/status/wcve05tifgki2dji?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla)
 
-Use this as a starting point for creating a plugin. This template is a mvvmcross plugin but the folder structure should be universal. This Plugin creates an ice cream machine that dispenses different flavours based on the platform. 
+Use this as a starting point for creating a plugin. This template is a xamarin plugin but the folder structure should be universal. This Plugin creates an ice cream machine that dispenses different flavours based on the platform.
 
 ### Setup
 * Install this plugin in the Core and Platform projects.
@@ -31,11 +31,11 @@ public interface IIceCreamMachine
 * Resolve the Ice Cream Machine
 * Call Dispense() to get the Ice Cream for that platform
 ```csharp
-_iceCreamMachine = Mvx.Resolve<IIceCreamMachine>();
-IceCream = _iceCreamMachine.Dispense();
+IIceCreamMachine iceCreamMachine = new IceCreamMachine();
+var iceCreamFlavour = iceCreamMachine.Dispense();
 ```
 
 
-Moar Plugins!!! 
+Moar Plugins!!!
 Moar Shared Code!!!
 Moar Awesome Apps!!!

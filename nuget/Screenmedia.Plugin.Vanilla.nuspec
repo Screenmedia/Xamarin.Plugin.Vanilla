@@ -2,39 +2,37 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>Screenmedia.Plugin.Vanilla</id>
-		<version>0.0.1</version>
-		<title>Screenmedia Plugin Template - Device Capabilities Plugin</title>
+		<version>0.0.2</version>
+		<title>Screenmedia Plugin Template - Vanilla Plugin</title>
 		<authors>Screenmedia</authors>
 		<owners>Screenmedia</owners>
         <licenseUrl>https://github.com/Screenmedia/Plugin.Vanilla/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/Screenmedia/Plugin.Vanilla</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Template Plugin</description>
-		<tags>mvvm mvvmcross cross xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia</tags>
+		<tags>xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia template vanilla</tags>
 		<iconUrl>https://github.com/Screenmedia/Plugin.Vanilla/blob/master/art/screenmedia_logo_64.png</iconUrl>
-		<dependencies>
-			<dependency id="MvvmCross.Platform" version="4.2.3" />
-		</dependencies>
 	</metadata>
 	<files>		
 		<!-- PCL -->
-		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\portable-net45+win+wpa81+wp80" />
+		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.dll" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Abstractions\bin\Release\Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.Abstractions.dll" />
 
-		<!-- dotnet -->
+		<!-- dotnet
 		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\dotnet" />
+		-->
 
-		<!-- droid -->
-		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\MonoAndroid" />
-		<file src="src\Screenmedia.Plugin.Vanilla.Droid\bin\Release\Screenmedia.Plugin.Vanilla.Droid.*" target="lib\MonoAndroid" />
-		<file src="nuget\BootstrapContent\VanillaPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\VanillaPluginBootstrap.cs.pp" />
+		<!-- android -->
+		<file src="src\Screenmedia.Plugin.Vanilla.Android\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.dll" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Abstractions\bin\Release\Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.Abstractions.dll" />
 
 		<!-- iOS -->
-		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.iOS10" />
-		<file src="src\Screenmedia.Plugin.Vanilla.iOS\bin\Release\Screenmedia.Plugin.Vanilla.iOS.*" target="lib\Xamarin.iOS10" />
-		<file src="nuget\iOSBootstrapContent\VanillaPluginBootstrap.cs.pp" target="content\Xamarin.iOS10\Bootstrap\VanillaPluginBootstrap.cs.pp" />
+		<file src="src\Screenmedia.Plugin.Vanilla.iOS\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Abstractions\bin\Release\Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.Abstractions.dll" />
 		
-		<!-- mac -->
+		<!-- mac
 		<file src="src\Screenmedia.Plugin.Vanilla\bin\Release\Screenmedia.Plugin.Vanilla.*" target="lib\Xamarin.Mac20" />
+		-->
 
 	</files>
 </package>
