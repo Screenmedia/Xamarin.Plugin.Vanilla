@@ -71,14 +71,14 @@ Task ("NuGet")
     if(!DirectoryExists("./Build/nuget/"))
         CreateDirectory("./Build/nuget");
         
-	var version = "0.0.9999";
+	var version = "0.0.0.9999";
 	if(isJenkinsBuild)
 	{
-		version = EnvironmentVariable ("JENKINS_BUILD_VERSION")  ?? Argument("version", "0.0.9999");
+		version = EnvironmentVariable ("JENKINS_BUILD_VERSION")  ?? Argument("version", "0.0.0.9999");
 	}
 	else
 	{
-		version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.9999");
+		version = EnvironmentVariable ("APPVEYOR_BUILD_VERSION") ?? Argument("version", "0.0.0.9999");
 	}
 	NuGetPack ("./nuget/" + packageName + ".nuspec", new NuGetPackSettings { 
 		Version = version,
