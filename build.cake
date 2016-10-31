@@ -1,14 +1,14 @@
 #addin nuget:https://nuget.org/api/v2/?package=Cake.FileHelpers&version=1.0.3.2
 #addin nuget:https://nuget.org/api/v2/?package=Cake.Xamarin&version=1.2.3
-
-var pluginName = "Vanilla"
-var packageName =  "Screenmedia.Plugin." + pluginName;
-var sampleName = pluginName + "Sample";
-var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
+var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
+var pluginName = "Vanilla";
+var packageName =  "Screenmedia.Plugin." + pluginName;
+var sampleName =  pluginName + "Sample";
+
 var libraries = new Dictionary<string, string> {
- 	{ "./src/" + packageName + ".sln", "Any" },
+ 	{ "./src/"+ packageName + ".sln", "Any" },
 };
 
 var samples = new Dictionary<string, string> {
