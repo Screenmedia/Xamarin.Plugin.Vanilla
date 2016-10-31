@@ -74,7 +74,7 @@ Task ("NuGet")
 	var version = "0.0.9999";
 	if(isJenkinsBuild)
 	{
-		version = EnvironmentVariable ("0.0." + Jenkins.Environment.Build.BuildNumber) ?? Argument("version", "0.0.9999");
+		version = EnvironmentVariable ("JENKINS_BUILD_VERSION")  ?? Argument("version", "0.0.9999");
 	}
 	else
 	{
