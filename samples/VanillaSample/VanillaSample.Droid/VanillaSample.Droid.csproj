@@ -14,7 +14,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -105,11 +105,11 @@
     <Reference Include="MvvmCross.Platform.Droid">
       <HintPath>..\packages\MvvmCross.Platform.4.2.3\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1\lib\MonoAndroid\Screenmedia.Plugin.Vanilla.dll</HintPath>
+    <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Screenmedia.Plugin.Vanilla.Droid">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1\lib\MonoAndroid\Screenmedia.Plugin.Vanilla.Droid.dll</HintPath>
+    <Reference Include="Screenmedia.Plugin.Vanilla">
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -119,21 +119,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\FirstView.axml" />
-    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\layout\first_view.axml" />
+    <AndroidResource Include="Resources\layout\splash_screen.axml" />
     <AndroidResource Include="Resources\layout\toolbar.axml" />
     <AndroidResource Include="Resources\values\arrays.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\dimens.xml" />
     <AndroidResource Include="Resources\values\integers.xml" />
-    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\values\splash_style.xml" />
     <AndroidResource Include="Resources\values\strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
@@ -141,7 +140,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
@@ -153,10 +151,9 @@
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
-    <Compile Include="Bootstrap\VanillaPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\AboutAssets.txt" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

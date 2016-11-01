@@ -1,6 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
-using Screenmedia.Plugin.Vanilla;
-using MvvmCross.Platform;
+using Screenmedia.Plugin.Vanilla.Abstractions;
 
 namespace VanillaSample.Core.ViewModels
 {
@@ -9,9 +8,9 @@ namespace VanillaSample.Core.ViewModels
 	{
 		readonly IIceCreamMachine _iceCreamMachine;
 
-		public FirstViewModel()
+		public FirstViewModel(IIceCreamMachine iceCreamMachine)
 		{
-			_iceCreamMachine = Mvx.Resolve<IIceCreamMachine>();
+			_iceCreamMachine = iceCreamMachine;
 			Hello = _iceCreamMachine.Dispense();
 		}
 

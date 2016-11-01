@@ -3,10 +3,10 @@ using Android.OS;
 
 namespace VanillaSample.Droid.Views
 {
-	[Activity(Label = "View for FirstViewModel")]
+	[Activity]
 	public class FirstView : BaseView
 	{
-		protected override int LayoutResource => Resource.Layout.FirstView;
+		protected override int LayoutResource => Resource.Layout.first_view;
 
 		protected override void OnCreate(Bundle bundle)
 		{

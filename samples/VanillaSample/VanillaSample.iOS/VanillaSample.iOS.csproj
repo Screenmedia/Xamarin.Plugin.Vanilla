@@ -112,11 +112,11 @@
     <Reference Include="MvvmCross.Platform.iOS">
       <HintPath>..\packages\MvvmCross.Platform.4.2.3\lib\Xamarin.iOS10\MvvmCross.Platform.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll</HintPath>
+    <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Screenmedia.Plugin.Vanilla.iOS">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.iOS.dll</HintPath>
+    <Reference Include="Screenmedia.Plugin.Vanilla">
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -139,7 +139,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FirstView.designer.cs" />
-    <Compile Include="Bootstrap\VanillaPluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />

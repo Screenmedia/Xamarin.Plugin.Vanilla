@@ -41,8 +41,11 @@
     <Reference Include="MvvmCross.Platform">
       <HintPath>..\packages\MvvmCross.Platform.4.2.3\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.4\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,7 @@
-﻿using MvvmCross.Platform.IoC;
+﻿using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
+using Screenmedia.Plugin.Vanilla;
+using Screenmedia.Plugin.Vanilla.Abstractions;
 
 namespace VanillaSample.Core
 {
@@ -10,6 +13,8 @@ namespace VanillaSample.Core
 				.EndingWith("Service")
 				.AsInterfaces()
 				.RegisterAsLazySingleton();
+
+			Mvx.LazyConstructAndRegisterSingleton<IIceCreamMachine>(() => new IceCreamMachine());
 
 			RegisterAppStart<ViewModels.FirstViewModel>();
 		}

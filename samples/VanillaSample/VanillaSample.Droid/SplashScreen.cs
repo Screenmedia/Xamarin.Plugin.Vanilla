@@ -7,14 +7,14 @@ namespace VanillaSample.Droid
 	[Activity(
 		Label = "VanillaSample.Droid"
 		, MainLauncher = true
-		, Icon = "@drawable/icon"
+		, Icon = "@mipmap/icon"
 		, Theme = "@style/Theme.Splash"
 		, NoHistory = true
 		, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class SplashScreen : MvxSplashScreenActivity
 	{
 		public SplashScreen()
-			: base(Resource.Layout.SplashScreen)
+			: base(Resource.Layout.splash_screen)
 		{
 		}
 	}
