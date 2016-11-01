@@ -1,6 +1,6 @@
 ﻿using Screenmedia.Plugin.Vanilla.Abstractions;
 
-namespace Screenmedia.Plugin.Vanilla.iOS
+namespace Screenmedia.Plugin.Vanilla
 {
 	public class IceCreamMachine : IIceCreamMachine
 	{
