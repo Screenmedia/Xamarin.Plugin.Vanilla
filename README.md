@@ -1,5 +1,5 @@
 # Screenmedia Vanilla Plugin Template
-[![Build status](https://ci.appveyor.com/api/projects/status/wcve05tifgki2dji?svg=true)](https://ci.appveyor.com/project/b099l3/plugin-vanilla)
+[![Build status](https://ci.appveyor.com/api/projects/status/sm6gh19tqem85i93?svg=true)](https://ci.appveyor.com/project/Screenmedia/plugin-vanilla)
 
 Use this as a starting point for creating a plugin. This template is a xamarin plugin but the folder structure should be universal. This Plugin creates an ice cream machine that dispenses different flavours based on the platform.
 
