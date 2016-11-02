@@ -10,16 +10,14 @@ namespace VanillaTests.Droid
 	)]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
 			SetContentView(Resource.Layout.main);
 
-			var button = FindViewById<Button>(Resource.Id.myButton);
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			var vm = new ViewModel();
+			var textView = FindViewById<TextView>(Resource.Id.textView1);
+			textView.Text = vm.IceCreamFlavour;
 		}
 	}
 }

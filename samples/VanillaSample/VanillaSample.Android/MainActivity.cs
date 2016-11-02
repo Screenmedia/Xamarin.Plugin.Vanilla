@@ -9,18 +9,17 @@ namespace VanillaSample.Android
 		  MainLauncher = true
 		, Icon = "@mipmap/icon"
 	)]
+
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
 			SetContentView(Resource.Layout.main);
 
-			var vm = new FirstViewModel();
-
+			var vm = new ViewModel();
 			var button = FindViewById<TextView>(Resource.Id.textView1);
-			button.Text = vm.IceCream;
+			button.Text = vm.IceCreamFlavour;
 		}
 	}
 }

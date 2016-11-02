@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProjectGuid>{659A3901-8B1C-4C4F-A194-880EA87230F8}</ProjectGuid>
+    <ProjectGuid>{BDB3D165-D9DA-4150-BA2B-C556635C4296}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>Vanilla.Tests.iOS</RootNamespace>
@@ -99,6 +99,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
+    <Compile Include="Tests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj">
+      <Project>{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
+      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

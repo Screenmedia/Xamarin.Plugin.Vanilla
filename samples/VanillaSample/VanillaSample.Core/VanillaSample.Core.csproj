@@ -30,15 +30,15 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.5\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.7\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.5\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.7\lib\portable-net45+win+wpa81+wp80\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

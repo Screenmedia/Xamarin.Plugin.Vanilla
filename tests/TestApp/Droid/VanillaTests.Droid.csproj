@@ -37,7 +37,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +48,14 @@
     <ProjectReference Include="..\VanillaTests\VanillaTests.csproj">
       <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
       <Name>VanillaTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj">
+      <Project>{81D3B0D4-148D-477C-A85F-D1119C2F6934}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
+      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

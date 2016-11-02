@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
-    <Compile Include="TestsSample.cs" />
+    <Compile Include="Tests.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,6 +64,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
+      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj">
+      <Project>{81D3B0D4-148D-477C-A85F-D1119C2F6934}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

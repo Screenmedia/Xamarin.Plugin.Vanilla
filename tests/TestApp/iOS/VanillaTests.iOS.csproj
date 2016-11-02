@@ -94,6 +94,14 @@
       <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
       <Name>VanillaTests</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj">
+      <Project>{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
+      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

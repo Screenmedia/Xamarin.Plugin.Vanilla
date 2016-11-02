@@ -3,16 +3,16 @@ using Screenmedia.Plugin.Vanilla.Abstractions;
 
 namespace VanillaSample.Core.ViewModels
 {
-	public class FirstViewModel
+	public class ViewModel
 	{
 		readonly IIceCreamMachine _iceCreamMachine;
 
-		public FirstViewModel()
+		public ViewModel()
 		{
 			_iceCreamMachine = new IceCreamMachine();
-			IceCream = _iceCreamMachine.Dispense();
+			IceCreamFlavour = _iceCreamMachine.Dispense();
 		}
 
-		public string IceCream { get; set; } = "Empty Cone";
+		public string IceCreamFlavour { get; set; } = "Empty Cone";
 	}
 }
