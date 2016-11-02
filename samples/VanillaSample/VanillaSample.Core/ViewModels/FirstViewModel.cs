@@ -1,24 +1,18 @@
-﻿using MvvmCross.Core.ViewModels;
+﻿using Screenmedia.Plugin.Vanilla;
 using Screenmedia.Plugin.Vanilla.Abstractions;
 
 namespace VanillaSample.Core.ViewModels
 {
 	public class FirstViewModel
-		: MvxViewModel
 	{
 		readonly IIceCreamMachine _iceCreamMachine;
 
-		public FirstViewModel(IIceCreamMachine iceCreamMachine)
+		public FirstViewModel()
 		{
-			_iceCreamMachine = iceCreamMachine;
-			Hello = _iceCreamMachine.Dispense();
+			_iceCreamMachine = new IceCreamMachine();
+			IceCream = _iceCreamMachine.Dispense();
 		}
 
-		private string _hello = "Hello MvvmCross";
-		public string Hello
-		{
-			get { return _hello; }
-			set { SetProperty(ref _hello, value); }
-		}
+		public string IceCream { get; set; } = "Empty Cone";
 	}
 }
