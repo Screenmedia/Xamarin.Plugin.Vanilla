@@ -4,7 +4,10 @@ using Android.OS;
 
 namespace VanillaTests.Droid
 {
-	[Activity(Label = "VanillaTests", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(
+		  MainLauncher = true
+		, Icon = "@mipmap/icon"
+	)]
 	public class MainActivity : Activity
 	{
 		int count = 1;
@@ -13,15 +16,10 @@ namespace VanillaTests.Droid
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+			SetContentView(Resource.Layout.main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
-
+			var button = FindViewById<Button>(Resource.Id.myButton);
 			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
 		}
 	}
 }
-
