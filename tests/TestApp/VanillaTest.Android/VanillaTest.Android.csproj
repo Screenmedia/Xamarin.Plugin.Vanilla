@@ -6,8 +6,8 @@
     <ProjectGuid>{9F50EAFB-707E-4C69-84DE-95A60420962A}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>VanillaTests.Droid</RootNamespace>
-    <AssemblyName>VanillaTests.Droid</AssemblyName>
+    <RootNamespace>VanillaTest.Android</RootNamespace>
+    <AssemblyName>VanillaTest.Android</AssemblyName>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -45,17 +45,13 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VanillaTests\VanillaTests.csproj">
-      <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
-      <Name>VanillaTests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj">
       <Project>{81D3B0D4-148D-477C-A85F-D1119C2F6934}</Project>
       <Name>Screenmedia.Plugin.Vanilla.Android</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj">
-      <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
-      <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
+    <ProjectReference Include="..\VanillaTest\VanillaTest.csproj">
+      <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
+      <Name>VanillaTest</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

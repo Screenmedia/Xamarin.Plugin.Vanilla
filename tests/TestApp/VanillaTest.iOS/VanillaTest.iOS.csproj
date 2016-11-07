@@ -6,7 +6,7 @@
     <ProjectGuid>{AD6987A7-40F5-461A-87B0-CEB7D02E05CB}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>VanillaTests.iOS</RootNamespace>
+    <RootNamespace>VanillaTest.iOS</RootNamespace>
     <AssemblyName>VanillaTests.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
   </PropertyGroup>
@@ -28,6 +28,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+<AssemblyName>VanillaTest.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -60,6 +61,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
+<AssemblyName>VanillaTest.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,10 +92,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VanillaTests\VanillaTests.csproj">
-      <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
-      <Name>VanillaTests</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\src\Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj">
       <Project>{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}</Project>
       <Name>Screenmedia.Plugin.Vanilla.iOS</Name>

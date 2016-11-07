@@ -1,6 +1,7 @@
 ﻿using Screenmedia.Plugin.Vanilla.Abstractions;
 using Screenmedia.Plugin.Vanilla;
-namespace VanillaTests
+
+namespace VanillaTest
 {
 	public class ViewModel
 	{
@@ -9,6 +10,7 @@ namespace VanillaTests
 		public ViewModel()
 		{
 			_iceCreamMachine = new IceCreamMachine();
+			IceCreamFlavour = _iceCreamMachine.Dispense();
 		}
 
 		public string IceCreamFlavour { get; set; } = "Empty Cone";

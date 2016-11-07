@@ -1,7 +1,7 @@
 ﻿using System;
 using UIKit;
 
-namespace VanillaTests.iOS
+namespace VanillaTest.iOS
 {
 	public partial class ViewController : UIViewController
 	{

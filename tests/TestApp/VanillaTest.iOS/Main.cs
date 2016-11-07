@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace VanillaTests.iOS
+namespace VanillaTest.iOS
 {
 	public class Application
 	{

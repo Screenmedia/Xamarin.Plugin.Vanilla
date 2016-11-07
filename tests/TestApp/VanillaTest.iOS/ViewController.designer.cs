@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace VanillaTests.iOS
+namespace VanillaTest.iOS
 {
 	[Register ("ViewController")]
 	partial class ViewController

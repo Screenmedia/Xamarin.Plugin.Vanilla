@@ -2,7 +2,7 @@
 using Android.Widget;
 using Android.OS;
 
-namespace VanillaTests.Droid
+namespace VanillaTest.Android
 {
 	[Activity(
 		  MainLauncher = true
