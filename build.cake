@@ -3,7 +3,7 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var Version = "0.0.1-beta"
+var version = "0.0.1-beta";
 var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
 var sampleName =  pluginName + "Sample";
@@ -75,7 +75,7 @@ Task ("NuGet")
         CreateDirectory("./Build/nuget");
     
 	NuGetPack ("./nuget/" + packageName + ".nuspec", new NuGetPackSettings { 
-		Version = Version,
+		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./Build/nuget/",
 		BasePath = "./",
@@ -83,7 +83,7 @@ Task ("NuGet")
 
 	// publish
 	// Get the path to the package.
-	var package = "./Build/nuget/" + packageName + "." + Version + ".nupkg";
+	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
 			
 	// Push the package.
 	NuGetPush(package, new NuGetPushSettings {
