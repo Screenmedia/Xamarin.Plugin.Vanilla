@@ -236,3 +236,11 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# CAKE
+# Build related
+tools/Cake/
+tools/nuget.exe
+tools/Addins/
+tools/packages.config
+tools/packages.config.md5sum
