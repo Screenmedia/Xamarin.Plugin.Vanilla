@@ -11,7 +11,8 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Template Plugin</description>
 		<tags>xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia template vanilla</tags>
-		<iconUrl>https://raw.githubusercontent.com/Screenmedia/Plugin.Vanilla/master/art/icon.png</iconUrl>
+		<!-- <iconUrl>https://raw.githubusercontent.com/Screenmedia/Plugin.Vanilla/master/art/icon.png</iconUrl> -->
+		<iconUrl>https://avatars0.githubusercontent.com/u/21346456?s=128</iconUrl>
 	</metadata>
 	<files>		
 		<!-- PCL -->
