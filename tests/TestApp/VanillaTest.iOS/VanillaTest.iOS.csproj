@@ -100,6 +100,10 @@
       <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
       <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VanillaTest\VanillaTest.csproj">
+      <Project>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</Project>
+      <Name>VanillaTest</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
