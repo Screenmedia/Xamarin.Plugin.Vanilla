@@ -23,8 +23,8 @@
 		-->
 
 		<!-- android -->
-		<file src="src\Screenmedia.Plugin.Vanilla.Android\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\MonoAndroid10\Screenmedia.Plugin.Vanilla.dll" />
-		<file src="src\Screenmedia.Plugin.Vanilla.Abstractions\bin\Release\Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib\MonoAndroid10\Screenmedia.Plugin.Vanilla.Abstractions.dll" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Android\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\MonoAndroid403\Screenmedia.Plugin.Vanilla.dll" />
+		<file src="src\Screenmedia.Plugin.Vanilla.Abstractions\bin\Release\Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib\MonoAndroid403\Screenmedia.Plugin.Vanilla.Abstractions.dll" />
 
 		<!-- iOS -->
 		<file src="src\Screenmedia.Plugin.Vanilla.iOS\bin\Release\Screenmedia.Plugin.Vanilla.dll" target="lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll" />
