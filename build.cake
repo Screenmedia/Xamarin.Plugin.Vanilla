@@ -89,8 +89,8 @@ Task ("NuGet")
 
 	if(IsRunningOnWindows ()) 
     {
-		nugetPackSettings.ToolPath = "./tools/nuget3.exe"
-		nugetPushSettings.ToolPath = "./tools/nuget3.exe"
+		nugetPackSettings.ToolPath = "./tools/nuget3.exe";
+		nugetPushSettings.ToolPath = "./tools/nuget3.exe";
     }
 
 	NuGetPack ("./nuget/" + packageName + ".nuspec", nugetPackSettings);	
