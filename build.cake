@@ -71,25 +71,36 @@ Task ("NuGet")
 	.IsDependentOn ("Libraries")
 	.Does (() =>
 {
-    if(!DirectoryExists("./Build/nuget/"))
-        CreateDirectory("./Build/nuget");
+    if(!DirectoryExists("./Build/nuget/")) CreateDirectory("./Build/nuget");
+
     
-	NuGetPack ("./nuget/" + packageName + ".nuspec", new NuGetPackSettings { 
+    var nugetPackSettings = new NuGetPackSettings 
+    { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./Build/nuget/",
-		BasePath = "./",
-	});	
+		BasePath = "./"
+	};
+
+	var nugetPushSettings = new NuGetPushSettings {
+		Source = EnvironmentVariable("MYGET_SERVER"),
+		ApiKey = EnvironmentVariable("MYGET_APIKEY")
+	};
+
+	if(IsRunningOnWindows ()) 
+    {
+		nugetPackSettings.ToolPath = "./tools/nuget3.exe"
+		nugetPushSettings.ToolPath = "./tools/nuget3.exe"
+    }
+
+	NuGetPack ("./nuget/" + packageName + ".nuspec", nugetPackSettings);	
 
 	// publish
 	// Get the path to the package.
 	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
 			
 	// Push the package.
-	NuGetPush(package, new NuGetPushSettings {
-		Source = EnvironmentVariable("MYGET_SERVER"),
-		ApiKey = EnvironmentVariable("MYGET_APIKEY")
-	});
+	NuGetPush(package, nugetPushSettings);
 });
 
 //Build the build samples, nugets, and libraries
