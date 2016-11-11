@@ -1,6 +1,6 @@
 # Use this for beta builds
 # version: 0.0.0.{build}-beta
-version: 0.0.0.{build}
+version: 0.0.1-beta.1
 branches:
     only:
       - master

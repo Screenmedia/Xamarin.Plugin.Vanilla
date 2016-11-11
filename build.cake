@@ -3,7 +3,7 @@
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var version = "0.0.1-beta";
+var version = "0.0.1-beta.1";
 var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
 var sampleName =  pluginName + "Sample";
