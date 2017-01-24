@@ -9,7 +9,7 @@ namespace VanillaTest
 
 		public ViewModel()
 		{
-			_iceCreamMachine = new IceCreamMachine();
+			_iceCreamMachine = CrossIceCreamMachine.Current;
 			IceCreamFlavour = _iceCreamMachine.Dispense();
 		}
 

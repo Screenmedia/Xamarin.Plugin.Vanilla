@@ -2,11 +2,11 @@
 
 namespace Screenmedia.Plugin.Vanilla
 {
-	public class IceCreamMachine : IIceCreamMachine
+	public class IceCreamMachineImplementation : IIceCreamMachine
 	{
 		public string Dispense()
 		{
-			return "Chocolate";
+			return "Strawberry";
 		}
 	}
 }
