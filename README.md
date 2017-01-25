@@ -31,7 +31,7 @@ public interface IIceCreamMachine
 * Resolve the Ice Cream Machine
 * Call Dispense() to get the Ice Cream for that platform
 ```csharp
-IIceCreamMachine iceCreamMachine = new IceCreamMachine();
+IIceCreamMachine iceCreamMachine = CrossIceCreamMachine.Current;
 var iceCreamFlavour = iceCreamMachine.Dispense();
 ```
 
