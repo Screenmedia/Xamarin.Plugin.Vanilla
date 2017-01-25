@@ -244,3 +244,7 @@ tools/nuget.exe
 tools/Addins/
 tools/packages.config
 tools/packages.config.md5sum
+
+
+# MFractor Android meta data
+.droidres/
