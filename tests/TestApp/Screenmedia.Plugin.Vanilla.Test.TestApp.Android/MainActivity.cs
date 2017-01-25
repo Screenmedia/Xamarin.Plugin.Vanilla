@@ -2,7 +2,7 @@
 using Android.Widget;
 using Android.OS;
 
-namespace VanillaTest.Android
+namespace Screenmedia.Plugin.Vanilla.Test.TestApp.Android
 {
 	[Activity(
 		  MainLauncher = true

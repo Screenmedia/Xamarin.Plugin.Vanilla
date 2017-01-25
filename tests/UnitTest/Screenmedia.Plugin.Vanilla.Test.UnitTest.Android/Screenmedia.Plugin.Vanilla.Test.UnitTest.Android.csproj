@@ -6,8 +6,8 @@
     <ProjectGuid>{3845E557-35F5-469C-8D61-6276FADCFE46}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Vanilla.Tests.Android</RootNamespace>
-    <AssemblyName>Vanilla.Tests.Android</AssemblyName>
+    <RootNamespace>Screenmedia.Plugin.Vanilla.Test.UnitTest.Android</RootNamespace>
+    <AssemblyName>Screenmedia.Plugin.Vanilla.Test.UnitTest.Android</AssemblyName>
     <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>

@@ -1,7 +1,6 @@
 ﻿using Screenmedia.Plugin.Vanilla.Abstractions;
-using Screenmedia.Plugin.Vanilla;
 
-namespace VanillaTest
+namespace Screenmedia.Plugin.Vanilla.Test.TestApp
 {
 	public class ViewModel
 	{

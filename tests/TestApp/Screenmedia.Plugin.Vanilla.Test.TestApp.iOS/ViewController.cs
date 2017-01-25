@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using UIKit;
 
-namespace VanillaTest.iOS
+namespace Screenmedia.Plugin.Vanilla.Test.TestApp.iOS
 {
 	public partial class ViewController : UIViewController
 	{

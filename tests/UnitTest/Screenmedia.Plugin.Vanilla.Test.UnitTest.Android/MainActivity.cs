@@ -1,12 +1,12 @@
-﻿using System.Reflection;
+using System.Reflection;
 
 using Android.App;
 using Android.OS;
 using Xamarin.Android.NUnitLite;
 
-namespace Vanilla.Tests.Android
+namespace Screenmedia.Plugin.Vanilla.Test.UnitTest.Android
 {
-	[Activity(Label = "Vanilla.Tests.Android", MainLauncher = true)]
+	[Activity(Label = "Screenmedia.Plugin.Vanilla.Test.UnitTest.Android", MainLauncher = true)]
 	public class MainActivity : TestSuiteActivity
 	{
 		protected override void OnCreate(Bundle bundle)

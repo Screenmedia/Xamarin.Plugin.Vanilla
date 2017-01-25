@@ -1,10 +1,10 @@
-﻿
+
 using System;
 using NUnit.Framework;
 using Screenmedia.Plugin.Vanilla;
 using Screenmedia.Plugin.Vanilla.Abstractions;
 
-namespace Vanilla.Tests.iOS
+namespace Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS
 {
 	[TestFixture]
 	public class Tests

@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace VanillaTest.iOS
+namespace Screenmedia.Plugin.Vanilla.Test.TestApp.iOS
 {
 	[Register ("ViewController")]
 	partial class ViewController

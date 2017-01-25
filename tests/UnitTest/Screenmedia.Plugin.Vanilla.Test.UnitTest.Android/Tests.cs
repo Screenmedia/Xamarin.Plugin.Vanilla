@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using NUnit.Framework;
-using Screenmedia.Plugin.Vanilla;
 using Screenmedia.Plugin.Vanilla.Abstractions;
 
-namespace Vanilla.Tests.Android
+namespace Screenmedia.Plugin.Vanilla.Test.UnitTest.Android
 {
 	[TestFixture]
 	public class Tests

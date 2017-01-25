@@ -6,8 +6,8 @@
     <ProjectGuid>{4C8487B6-F5E4-49F1-936E-5BF8AB5A5D95}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>VanillaTest</RootNamespace>
-    <AssemblyName>VanillaTest</AssemblyName>
+    <RootNamespace>Screenmedia.Plugin.Vanilla.Test.TestApp</RootNamespace>
+    <AssemblyName>Screenmedia.Plugin.Vanilla.Test.TestApp</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
   </PropertyGroup>
