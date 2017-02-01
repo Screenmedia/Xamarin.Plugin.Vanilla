@@ -99,8 +99,11 @@ Task ("NuGet")
 	// Get the path to the package.
 	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
 			
-	// Push the package.
-	NuGetPush(package, nugetPushSettings);
+	if(EnvironmentVariable("MYGET_PUSH") != null)
+	{
+		// Push the package.
+		NuGetPush(package, nugetPushSettings);
+	}
 });
 
 //Build the build samples, nugets, and libraries
