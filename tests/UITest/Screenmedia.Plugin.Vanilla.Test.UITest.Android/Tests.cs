@@ -2,7 +2,7 @@
 using Xamarin.UITest;
 using Xamarin.UITest.Android;
 
-namespace Screenmedia.Plugin.Vanilla.Tet.UITest.Android
+namespace Screenmedia.Plugin.Vanilla.Test.UITest.Android
 {
     [TestFixture]
     public class Tests

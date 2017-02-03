@@ -2,7 +2,7 @@
 using Xamarin.UITest;
 using Xamarin.UITest.iOS;
 
-namespace Screenmedia.Plugin.Vanilla.Tet.UITest.iOS
+namespace Screenmedia.Plugin.Vanilla.Test.UITest.iOS
 {
     [TestFixture]
     public class Tests

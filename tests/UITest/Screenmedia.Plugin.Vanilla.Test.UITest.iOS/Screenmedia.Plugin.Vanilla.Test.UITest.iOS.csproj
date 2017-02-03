@@ -6,7 +6,7 @@
     <ProjectGuid>{5A568AA1-20FE-40C2-B496-98A157DBCEAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Screenmedia.Plugin.Vanilla.Test.UITest.iOS</RootNamespace>
-    <AssemblyName>Screenmedia.Plugin.Vanilla.Tet.UITest.iOS</AssemblyName>
+    <AssemblyName>Screenmedia.Plugin.Vanilla.Test.UITest.iOS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
