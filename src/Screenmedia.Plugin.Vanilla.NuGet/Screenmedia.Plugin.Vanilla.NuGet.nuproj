@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}</ProjectGuid>
+    <Description>Plugin Template</Description>
+    <PackageId>Screenmedia.Plugin.Vanilla</PackageId>
+    <PackageVersion>0.0.1-beta.1</PackageVersion>
+    <Authors>Screenmedia</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Screenmedia.Plugin.Vanilla.NuGet</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>Screenmedia.Plugin.Vanilla.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>Screenmedia</Owners>
+    <PackageTags>xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia template vanilla</PackageTags>
+    <Title>Screenmedia Plugin Template</Title>
+    <PackageProjectUrl>https://github.com/Screenmedia/Plugin.Vanilla</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/Screenmedia/Plugin.Vanilla/master/art/icon.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/Screenmedia/Plugin.Vanilla/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj">
+      <Project>{81D3B0D4-148D-477C-A85F-D1119C2F6934}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Screenmedia.Plugin.Vanilla.iOS\Screenmedia.Plugin.Vanilla.iOS.csproj">
+      <Project>{80ADBC27-60BD-42B4-A7D4-B3FA78EDB3FF}</Project>
+      <Name>Screenmedia.Plugin.Vanilla.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Screenmedia.Plugin.Vanilla\Screenmedia.Plugin.Vanilla.csproj">
+      <Project>{5A0581FF-69A3-443B-B7BE-DDE7C9D716A4}</Project>
+      <Name>Screenmedia.Plugin.Vanilla</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.1.193</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

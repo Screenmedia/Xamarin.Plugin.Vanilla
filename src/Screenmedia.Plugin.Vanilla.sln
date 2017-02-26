@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Android", "Screenmedia.Plugin.Vanilla.Android\Screenmedia.Plugin.Vanilla.Android.csproj", "{81D3B0D4-148D-477C-A85F-D1119C2F6934}"
 EndProject
+Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "Screenmedia.Plugin.Vanilla.NuGet", "Screenmedia.Plugin.Vanilla.NuGet\Screenmedia.Plugin.Vanilla.NuGet.nuproj", "{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +33,9 @@ Global
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81D3B0D4-148D-477C-A85F-D1119C2F6934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB020C1B-7FC4-48FE-9D23-6C49F47144D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
