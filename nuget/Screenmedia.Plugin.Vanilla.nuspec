@@ -15,8 +15,8 @@
 	</metadata>
 	<files>		
 		<!-- PCL -->
-		<file src="src/Screenmedia.Plugin.Vanilla/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/portable-net45+win+wpa81+wp80/Screenmedia.Plugin.Vanilla.dll" />
-		<file src="src/Screenmedia.Plugin.Vanilla.Abstractions/bin/Release/Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib/portable-net45+win+wpa81+wp80/Screenmedia.Plugin.Vanilla.Abstractions.dll" />
+		<file src="src/Screenmedia.Plugin.Vanilla/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/portable-net45+win8+wpa81/Screenmedia.Plugin.Vanilla.dll" />
+		<file src="src/Screenmedia.Plugin.Vanilla.Abstractions/bin/Release/Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib/portable-net45+win8+wpa81/Screenmedia.Plugin.Vanilla.Abstractions.dll" />
 
 		<!-- android -->
 		<file src="src/Screenmedia.Plugin.Vanilla.Android/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/MonoAndroid403/Screenmedia.Plugin.Vanilla.dll" />
