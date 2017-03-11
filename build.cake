@@ -1,18 +1,14 @@
 #addin Cake.FileHelpers
+using System.Text.RegularExpressions;
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var version = "0.0.1-beta.1";
+var version = "0.0.0"; // this will be overridden by the changelog enteries
 var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
-var sampleName =  pluginName + "Sample";
 
-var libraries = new Dictionary<string, string> {
+var src = new Dictionary<string, string> {
  	{ "./src/"+ packageName + ".sln", "Any" },
-};
-
-var samples = new Dictionary<string, string> {
-	{ "./samples/" + sampleName + "/" + sampleName + ".sln", "Win" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
@@ -54,31 +50,34 @@ var BuildAction = new Action<Dictionary<string, string>> (solutions =>
 	}
 });
 
-Task("Libraries").Does(()=>
+Task("srcBuild").Does(()=>
 {
-    BuildAction(libraries);
-});
-
-Task("Samples")
-    .IsDependentOn("Libraries")
-    .Does(()=>
-{
-    BuildAction(samples);
+    BuildAction(src);
 });
 
 Task ("NuGet")
-	.IsDependentOn ("Libraries")
+	.IsDependentOn ("srcBuild")
 	.Does (() =>
 {
     if(!DirectoryExists("./Build/nuget/")) CreateDirectory("./Build/nuget");
 
-    
+	var latestChange = FileReadLines("./changelog")[0];
+
+	// Taking version number from changelog
+    Match match = Regex.Match(latestChange, @"\[([^)]*)\]");
+	if (match.Success)
+    {
+		version = match.Groups[1].Value;
+        Information($"Publishing Version: {version}");
+    }
+
     var nugetPackSettings = new NuGetPackSettings 
     { 
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./Build/nuget/",
-		BasePath = "./"
+		BasePath = "./",
+		ReleaseNotes = FileReadLines("./changelog") // takes the first line the change log
 	};
 
 	var nugetPushSettings = new NuGetPushSettings {
@@ -97,7 +96,7 @@ Task ("NuGet")
 	// publish
 	// Get the path to the package.
 	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
-			
+					
 	if(EnvironmentVariable("MYGET_PUSH") != null)
 	{
 		// Push the package.
@@ -105,7 +104,7 @@ Task ("NuGet")
 	}
 });
 
-//Build the build samples, nugets, and libraries
+//Build the src and deploy to nuget
 Task ("Default").IsDependentOn("NuGet");
 
 
