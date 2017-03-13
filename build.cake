@@ -82,7 +82,7 @@ Task ("NuGet")
 	}
 
 	//Taking version number from changelog
-	var semverRegex = @"\[(?<whole>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]";
+	var semverRegex = @"\[(?<whole>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]\s+(?<notes>.*)";
 	Match match = Regex.Match(latestChange, semverRegex);
 	if (match.Success)
     {

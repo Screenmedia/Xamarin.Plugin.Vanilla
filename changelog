@@ -1,1 +1,2 @@
-[0.0.1-beta2] - Updated cake script to pull information from changelog
+[0.0.1-beta3] Updated cake script to output errors and force changelog format
+[0.0.1-beta2] Updated cake script to pull information from changelog
