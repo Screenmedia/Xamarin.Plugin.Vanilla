@@ -44,10 +44,10 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.5\lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\MonoAndroid403\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.0.5\lib\MonoAndroid16\Screenmedia.Plugin.Vanilla.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\MonoAndroid403\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
