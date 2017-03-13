@@ -1,9 +1,8 @@
 #addin Cake.FileHelpers
 using System.Text.RegularExpressions;
+
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
-var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var version = "0.0.0"; // this will be overridden by the changelog entries
 var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
 
@@ -56,8 +55,10 @@ Task("srcBuild").Does(()=>
 
 Task ("NuGet")
 	.IsDependentOn ("srcBuild")
+	.WithCriteria(EnvironmentVariable("MYGET_PUSH") != null)
 	.Does (() =>
 {
+		
     if(!DirectoryExists("./Build/nuget/")) 
 	{
 		CreateDirectory("./Build/nuget");
@@ -69,29 +70,34 @@ Task ("NuGet")
 		throw new Exception(@"No Change log file found, please add the file 'changelog' to the root directory");
 	}
 
-	var changes = FileReadLines(changeLogPath);
-	string latestChange = String.Empty;
-	if (changes.Length > 0)
+	var changesText = FileReadText(changeLogPath);
+	if (String.IsNullOrEmpty(changesText))
 	{
-		latestChange = changes[0]; // takes the first line the change log
-        Information($"Nuegt Package Release notes: {latestChange}");
-	}
-	else
-	{
-		throw new Exception("No entries in change log file found, please add an entry e.g. [1.0.0] added a wicked left hand menu");
+		throw new Exception("No entries in change log file found, please add an entry e.g. \n\n[1.0.0] - 2017/03/13 \nAdded \n- A wicked left hand menu");
 	}
 
 	//Taking version number from changelog
-	var semverRegex = @"\[(?<whole>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]\s+(?<notes>.*)";
-	Match match = Regex.Match(latestChange, semverRegex);
+	var version = "0.0.0";
+	var notes = string.Empty;
+	var semverRegex = @"\[(?<version>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]\s+\-\s+(?<date>.*)
+(?<notes>[^#]*)";
+	Match match = Regex.Match(changesText, semverRegex);
 	if (match.Success)
     {
-		version = match.Groups["whole"].Value;
+		version = match.Groups["version"].Value;
         Information($"Publishing Version: {version}");
+		notes = match.Groups["notes"].Value;
+        Information($"With release notes: {notes}");
     }
-	else
+	
+	if(version == "0.0.0")
 	{
-		throw new Exception("No version number detected in changelog, please add a semantic version in the change log like so [1.0.0] added a sweet temperature picker");
+		throw new Exception("No version number detected in changelog, please add a semantic version in the change log like so\n\n# [1.0.0-rc1] - 2017/03/13 \nAdded \n- Sweet temperature picker");
+	}
+
+	if(String.IsNullOrEmpty(notes))
+	{
+		throw new Exception($"No releate notes detected in changelog for version {version}, please add release notes e.g. \n\n# [1.1.0-rc1] - 2017-03-08 \nAdded \n- UpsertAll method");	
 	}
 
 
@@ -101,7 +107,7 @@ Task ("NuGet")
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./Build/nuget/",
 		BasePath = "./",
-		ReleaseNotes = new string[] {latestChange}
+		ReleaseNotes = new string[] {notes}
 	};
 
 	var nugetPushSettings = new NuGetPushSettings {
@@ -120,12 +126,9 @@ Task ("NuGet")
 	// publish
 	// Get the path to the package.
 	var package = "./Build/nuget/" + packageName + "." + version + ".nupkg";
-					
-	if(EnvironmentVariable("MYGET_PUSH") != null)
-	{
-		// Push the package.
-		NuGetPush(package, nugetPushSettings);
-	}
+		
+	// Push the package.
+	NuGetPush(package, nugetPushSettings);
 });
 
 //Build the src and deploy to nuget
