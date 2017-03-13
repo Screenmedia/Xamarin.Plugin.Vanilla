@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 var TARGET = Argument ("target", Argument ("t", "Default"));
 
 var isJenkinsBuild = Jenkins.IsRunningOnJenkins;
-var version = "0.0.0"; // this will be overridden by the changelog enteries
+var version = "0.0.0"; // this will be overridden by the changelog entries
 var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
 
@@ -43,7 +43,6 @@ var BuildAction = new Action<Dictionary<string, string>> (solutions =>
             {
                 // Mac is easy ;)
 				NuGetRestore (sln.Key);
-
 				DotNetBuild (sln.Key, c => c.Configuration = "Release");
 			}
 		}
@@ -59,17 +58,42 @@ Task ("NuGet")
 	.IsDependentOn ("srcBuild")
 	.Does (() =>
 {
-    if(!DirectoryExists("./Build/nuget/")) CreateDirectory("./Build/nuget");
+    if(!DirectoryExists("./Build/nuget/")) 
+	{
+		CreateDirectory("./Build/nuget");
+	}
 
-	var latestChange = FileReadLines("./changelog")[0];
+	var changeLogPath = "./changelog";
+	if(!FileExists(changeLogPath))
+	{
+		throw new Exception(@"No Change log file found, please add the file 'changelog' to the root directory");
+	}
 
-	// Taking version number from changelog
-    Match match = Regex.Match(latestChange, @"\[([^)]*)\]");
+	var changes = FileReadLines(changeLogPath);
+	string latestChange = String.Empty;
+	if (changes.Length > 0)
+	{
+		latestChange = changes[0]; // takes the first line the change log
+        Information($"Nuegt Package Release notes: {latestChange}");
+	}
+	else
+	{
+		throw new Exception("No entries in change log file found, please add an entry e.g. [1.0.0] added a wicked left hand menu");
+	}
+
+	//Taking version number from changelog
+	var semverRegex = @"\[(?<whole>(?<major>\d+)(\.(?<minor>\d+))?(\.(?<patch>\d+))?(\-(?<pre>[0-9A-Za-z\-\.]+))?(\+(?<build>[0-9A-Za-z\-\.]+))?)\]";
+	Match match = Regex.Match(latestChange, semverRegex);
 	if (match.Success)
     {
-		version = match.Groups[1].Value;
+		version = match.Groups["whole"].Value;
         Information($"Publishing Version: {version}");
     }
+	else
+	{
+		throw new Exception("No version number detected in changelog, please add a semantic version in the change log like so [1.0.0] added a sweet temperature picker");
+	}
+
 
     var nugetPackSettings = new NuGetPackSettings 
     { 
@@ -77,7 +101,7 @@ Task ("NuGet")
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./Build/nuget/",
 		BasePath = "./",
-		ReleaseNotes = FileReadLines("./changelog") // takes the first line the change log
+		ReleaseNotes = new string[] {latestChange}
 	};
 
 	var nugetPushSettings = new NuGetPushSettings {
