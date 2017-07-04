@@ -18,7 +18,7 @@
 			</group>
 			<group targetFramework="portable-net45+win8+wpa81">
 			</group>
-			<group targetFramework="MonoAndroid10">
+			<group targetFramework="MonoAndroid403">
 			</group>
 			<group targetFramework="Xamarin.iOS10">
 			</group>
@@ -29,10 +29,10 @@
 		<file src="src/Screenmedia.Plugin.Vanilla/bin/Release/netstandard1.0/Screenmedia.Plugin.Vanilla.*" target="lib/netstandard1.0" />
 
 		<!-- android -->
-		<file src="src/Screenmedia.Plugin.Vanilla.Android/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/netstandard1.0" />
+		<file src="src/Screenmedia.Plugin.Vanilla.Android/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/MonoAndroid403" />
 
 		<!-- iOS -->
-		<file src="src/Screenmedia.Plugin.Vanilla.iOS/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/netstandard1.0" />
+		<file src="src/Screenmedia.Plugin.Vanilla.iOS/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/Xamarin.iOS10" />
 	</files>
 </package>
 
