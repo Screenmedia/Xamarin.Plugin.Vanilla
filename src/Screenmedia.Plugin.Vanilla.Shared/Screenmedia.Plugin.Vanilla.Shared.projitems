@@ -9,6 +9,6 @@
     <Import_RootNamespace>Screenmedia.Plugin.Vanilla.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)CrossIceCreamMachine.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalAssemblyInfo.cs" />
   </ItemGroup>
 </Project>

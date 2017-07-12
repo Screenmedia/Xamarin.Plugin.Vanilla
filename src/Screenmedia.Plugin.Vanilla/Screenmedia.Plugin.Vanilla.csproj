@@ -7,5 +7,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Screenmedia.Plugin.Vanilla.Abstractions\Screenmedia.Plugin.Vanilla.Abstractions.csproj" />
   </ItemGroup>
-  <Import Project="..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems" Label="Shared" Condition="Exists('..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems')" />
 </Project>
