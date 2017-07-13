@@ -2,10 +2,12 @@
 format_version: 1.3.1
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 trigger_map:
+- tag: "*.*.*"
+  workflow: publish
 - push_branch: develop
   workflow: build
 - push_branch: master
-  workflow: publish
+  workflow: build
 - pull_request_source_branch: "*"
   workflow: build
 workflows:
