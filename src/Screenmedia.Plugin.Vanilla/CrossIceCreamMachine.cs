@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿using System;
 using Screenmedia.Plugin.Vanilla.Abstractions;
 
 namespace Screenmedia.Plugin.Vanilla
@@ -28,7 +28,7 @@ namespace Screenmedia.Plugin.Vanilla
 
         static IIceCreamMachine CreateIceCreamMachine()
         {
-#if PORTABLE
+#if NETSTANDARD1_0
             return null;
 #else
             return new IceCreamMachineImplementation();

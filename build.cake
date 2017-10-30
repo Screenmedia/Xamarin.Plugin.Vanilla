@@ -7,43 +7,40 @@ var pluginName = "Vanilla";
 var packageName =  "Screenmedia.Plugin." + pluginName;
 
 var src = new Dictionary<string, string> {
- 	{ "./src/"+ packageName + ".sln", "Any" },
+	{ "./src/"+ packageName + ".sln", "Any" },
 };
 
 var BuildAction = new Action<Dictionary<string, string>> (solutions =>
 {
-	foreach (var sln in solutions) 
-    {
+	foreach (var sln in solutions)
+	{
 		// If the platform is Any build regardless
 		//  If the platform is Win and we are running on windows build
 		//  If the platform is Mac and we are running on Mac, build
 		if ((sln.Value == "Any")
 				|| (sln.Value == "Win" && IsRunningOnWindows ())
 				|| (sln.Value == "Mac" && IsRunningOnUnix ())) 
-        {
-			// Bit of a hack to use nuget3 to restore packages for project.json
-			if (IsRunningOnWindows ()) 
-            {
-				Information ("RunningOn: {0}", "Windows");
+		{
+			NuGetRestore (sln.Key, new NuGetRestoreSettings
+			{
+				ToolPath = "./tools/nuget.exe"
+			});
 
-				NuGetRestore (sln.Key, new NuGetRestoreSettings
-                {
-					ToolPath = "./tools/nuget3.exe"
-				});
+			MSBuild (sln.Key, c => 
+			{
+				c.Configuration = "Release";
 
-				// Windows Phone / Universal projects require not using the amd64 msbuild
-				MSBuild (sln.Key, c => 
-                { 
-					c.Configuration = "Release";
+				if (IsRunningOnWindows ())
+				{
+					// Windows Phone / Universal projects require not using the amd64 msbuild
 					c.MSBuildPlatform = Cake.Common.Tools.MSBuild.MSBuildPlatform.x86;
-				});
-			} 
-            else 
-            {
-                // Mac is easy ;)
-				NuGetRestore (sln.Key);
-				DotNetBuild (sln.Key, c => c.Configuration = "Release");
-			}
+				}
+				else
+				{
+					// Mac not yet handling finding msbuild by itself
+					c.ToolPath = @"/Library/Frameworks/Mono.framework/Versions/Current/Commands/msbuild";
+				}
+			});
 		}
 	}
 });
