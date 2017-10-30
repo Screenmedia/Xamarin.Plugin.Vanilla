@@ -1,14 +1,19 @@
-﻿﻿﻿using System;
-using Screenmedia.Plugin.Vanilla.Abstractions;
-
+﻿// -----------------------------------------------------------------------
+//  <copyright file="CrossIceCreamMachine.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2017. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 namespace Screenmedia.Plugin.Vanilla
 {
+    using System;
+    using Screenmedia.Plugin.Vanilla.Abstractions;
+
     /// <summary>
     /// Cross platform IceCreamMachine implemenations
     /// </summary>
     public static class CrossIceCreamMachine
     {
-        static Lazy<IIceCreamMachine> Implementation = new Lazy<IIceCreamMachine>(CreateIceCreamMachine, System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        private static Lazy<IIceCreamMachine> implementation = new Lazy<IIceCreamMachine>(CreateIceCreamMachine, System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Current settings to use
@@ -17,27 +22,28 @@ namespace Screenmedia.Plugin.Vanilla
         {
             get
             {
-                var ret = Implementation.Value;
+                var ret = implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
                 }
+
                 return ret;
             }
         }
 
-        static IIceCreamMachine CreateIceCreamMachine()
+        internal static Exception NotImplementedInReferenceAssembly()
+        {
+            return new NotImplementedException("This functionality is not implemented in the portable version of this assembly. You should reference the NuGet package from your main application project in order to reference the platform-specific implementation.");
+        }
+
+        private static IIceCreamMachine CreateIceCreamMachine()
         {
 #if NETSTANDARD1_0
             return null;
 #else
             return new IceCreamMachineImplementation();
 #endif
-        }
-
-        internal static Exception NotImplementedInReferenceAssembly()
-        {
-            return new NotImplementedException("This functionality is not implemented in the portable version of this assembly.  You should reference the NuGet package from your main application project in order to reference the platform-specific implementation.");
         }
     }
 }

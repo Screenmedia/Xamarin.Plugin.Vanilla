@@ -1,4 +1,9 @@
-﻿using System.Resources;
+﻿// -----------------------------------------------------------------------
+//  <copyright file="GlobalAssemblyInfo.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2017. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
+using System.Resources;
 using System.Reflection;
 
 // Information about this assembly is defined by the following attributes. 

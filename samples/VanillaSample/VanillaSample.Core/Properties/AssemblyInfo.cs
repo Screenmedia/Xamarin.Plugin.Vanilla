@@ -1,4 +1,9 @@
-﻿using System.Resources;
+﻿// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2017. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
+using System.Resources;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
