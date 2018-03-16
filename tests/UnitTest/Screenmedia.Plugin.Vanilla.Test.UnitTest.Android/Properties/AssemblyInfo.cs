@@ -1,3 +1,8 @@
+// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2017. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Android.App;
@@ -23,5 +28,5 @@ using Android.App;
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.
 
-//[assembly: AssemblyDelaySign(false)]
-//[assembly: AssemblyKeyFile("")]
+// [assembly: AssemblyDelaySign(false)]
+// [assembly: AssemblyKeyFile("")]

@@ -1,4 +1,9 @@
-﻿using System.Reflection;
+﻿// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2017. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
+using System.Reflection;
 
 // Information about this assembly is defined by the following attributes. 
 // Change them to the values specific to your project.

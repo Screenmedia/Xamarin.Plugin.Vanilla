@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <StyleCopTreatErrorsAsWarnings Condition="'$(Configuration)'=='Release'">false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="StyleCop.MSBuild" Version="5.0.0" />
+  </ItemGroup>
 </Project>
