@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenmedia.Plugin.Vanilla.Test.UITest.iOS", "UITest\Screenmedia.Plugin.Vanilla.Test.UITest.iOS\Screenmedia.Plugin.Vanilla.Test.UITest.iOS.csproj", "{5A568AA1-20FE-40C2-B496-98A157DBCEAE}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Screenmedia.Plugin.Vanilla.Shared", "..\src\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.shproj", "{F7C954A7-E4AD-4966-B247-9647C80EE350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -186,5 +188,6 @@ Global
 		{BDB3D165-D9DA-4150-BA2B-C556635C4296} = {4BE0D386-74CD-4746-8A40-DE1C83C2C755}
 		{7EE4C57E-3288-4BDE-B260-9CB011DE7A28} = {FE2D2B53-9A35-46B8-9B38-266F6C59C796}
 		{5A568AA1-20FE-40C2-B496-98A157DBCEAE} = {FE2D2B53-9A35-46B8-9B38-266F6C59C796}
+		{F7C954A7-E4AD-4966-B247-9647C80EE350} = {6E9CE62F-808D-4B35-B2E3-951CE45880EA}
 	EndGlobalSection
 EndGlobal
