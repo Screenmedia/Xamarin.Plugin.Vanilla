@@ -11,4 +11,5 @@
   <ItemGroup>
     <PackageReference Include="StyleCop.MSBuild" Version="5.0.0" />
   </ItemGroup>
+  <Import Project="..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems" Label="Shared" Condition="Exists('..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems')" />
 </Project>
