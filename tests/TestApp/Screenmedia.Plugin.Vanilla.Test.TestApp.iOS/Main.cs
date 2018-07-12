@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
 //  <copyright file="Main.cs" company="Screenmedia">
-//      Copyright (c) Screenmedia 2017. All rights reserved.
+//      Copyright (c) Screenmedia 2018. All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------
 [module: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1649:FileHeaderFileNameDocumentationMustMatchTypeName", Justification = "Reviewed")]
