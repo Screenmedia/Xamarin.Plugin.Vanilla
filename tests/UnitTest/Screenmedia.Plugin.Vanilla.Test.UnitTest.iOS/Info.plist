@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>Vanilla Tests</string>
+	<string>Vanilla Unit Tests</string>
 	<key>CFBundleIdentifier</key>
-	<string>uk.co.screenmedia.plugin.vanilla.tests</string>
+	<string>uk.co.screenmedia.plugin.vanilla.test.unittest</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
