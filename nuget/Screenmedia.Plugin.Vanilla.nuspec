@@ -23,6 +23,9 @@
 			<group targetFramework="Xamarin.iOS10">
 			</group>
 		</dependencies>
+		<releaseNotes>
+			See: https://github.com/Screenmedia/Plugin.Vanilla/blob/master/CHANGELOG.md
+		</releaseNotes>
 	</metadata>
 	<files>
 		<!-- NetStandard/PCL -->
