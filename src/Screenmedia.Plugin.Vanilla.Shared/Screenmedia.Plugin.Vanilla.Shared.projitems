@@ -10,5 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)GlobalAssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CrossIceCreamMachine.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
   </ItemGroup>
 </Project>
