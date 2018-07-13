@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
 //  <copyright file="AssemblyInfo.cs" company="Screenmedia">
-//      Copyright (c) Screenmedia 2017. All rights reserved.
+//      Copyright (c) Screenmedia 2018. All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------
 using System.Reflection;

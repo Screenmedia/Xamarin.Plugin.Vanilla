@@ -1,6 +1,6 @@
 // -----------------------------------------------------------------------
 //  <copyright file="ViewController.cs" company="Screenmedia">
-//      Copyright (c) Screenmedia 2017. All rights reserved.
+//      Copyright (c) Screenmedia 2018. All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------
 namespace Screenmedia.Plugin.Vanilla.Test.TestApp.iOS
