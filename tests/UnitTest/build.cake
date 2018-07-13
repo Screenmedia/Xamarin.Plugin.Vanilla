@@ -66,7 +66,28 @@ Action<FilePath, string> AddPlatformToTestResults = (FilePath testResultsFile, s
     }
 };
 
+
+Task ("build-android")
+    .Does (() =>
+{
+    // Nuget restore
+    MSBuild (ANDROID_PROJ, c => {
+        c.Configuration = "Debug";
+        c.Targets.Clear();
+        c.Targets.Add("Restore");
+    });
+
+    // Build the app in debug mode
+    // needs to be debug so unit tests get discovered
+    MSBuild (ANDROID_PROJ, c => {
+        c.Configuration = "Debug";
+        c.Targets.Clear();
+        c.Targets.Add("Rebuild");
+    });
+});
+
 Task ("test-android-emu")
+    .IsDependentOn ("build-android")
     .Does (() =>
 {
     if (EnvironmentVariable("ANDROID_SKIP_AVD_CREATE") == null) {
