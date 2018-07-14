@@ -12,7 +12,7 @@ var ANDROID_PKG_NAME = "uk.co.screenmedia.plugin.vanilla.test.unittest";
 var ANDROID_EMU_TARGET = EnvironmentVariable("ANDROID_EMU_TARGET") ?? "system-images;android-26;google_apis;x86_64";
 var ANDROID_EMU_DEVICE = EnvironmentVariable("ANDROID_EMU_DEVICE") ?? "Nexus 5X";
 
-var TCP_LISTEN_TIMEOUT = 60;
+var TCP_LISTEN_TIMEOUT = 600;
 var TCP_LISTEN_PORT = 10578;
 var TCP_LISTEN_HOST = System.Net.Dns.GetHostEntry(System.Net.Dns.GetHostName())
         .AddressList.First(f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).ToString();
