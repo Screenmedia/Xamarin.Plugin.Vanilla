@@ -141,7 +141,7 @@ Task ("test-android-emu")
     adbSettings = new AdbToolSettings { SdkRoot = ANDROID_HOME, Serial = emuSerial };
 
     // Wait for the emulator to enter a 'booted' state
-    AdbWaitForEmulatorToBoot(TimeSpan.FromSeconds(100), adbSettings);
+    AdbWaitForEmulatorToBoot(TimeSpan.FromSeconds(600), adbSettings);
     Information ("Emulator finished booting.");
 
     // Try uninstalling the existing package (if installed)
