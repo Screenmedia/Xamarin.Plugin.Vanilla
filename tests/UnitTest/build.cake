@@ -5,6 +5,7 @@
 
 var TARGET = Argument("target", "Default");
 
+var ANDROID_BUILD_TOOLS = "27.0.3";
 var ANDROID_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.Android/Screenmedia.Plugin.Vanilla.Test.UnitTest.Android.csproj";
 var ANDROID_TEST_RESULTS_PATH = "./xunit-android.xml";
 var ANDROID_AVD = "CABOODLE";
@@ -77,6 +78,7 @@ Task ("build-android")
     // Nuget restore
     MSBuild (ANDROID_PROJ, c => {
         c.Configuration = "Debug";
+        c.Properties["AndroidSdkBuildToolsVersion"] = new List<string> { ANDROID_BUILD_TOOLS };
         c.Targets.Clear();
         c.Targets.Add("Restore");
     });
@@ -85,6 +87,7 @@ Task ("build-android")
     // needs to be debug so unit tests get discovered
     MSBuild (ANDROID_PROJ, c => {
         c.Configuration = "Debug";
+        c.Properties["AndroidSdkBuildToolsVersion"] = new List<string> { ANDROID_BUILD_TOOLS };
         c.Targets.Clear();
         c.Targets.Add("Rebuild");
     });
@@ -158,6 +161,7 @@ Task ("test-android-emu")
     MSBuild (ANDROID_PROJ, c => {
         c.Configuration = "Debug";
         c.Properties["AdbTarget"] = new List<string> { "-s " + emuSerial };
+        c.Properties["AndroidSdkBuildToolsVersion"] = new List<string> { ANDROID_BUILD_TOOLS };
         c.Targets.Clear();
         c.Targets.Add("Install");
     });
