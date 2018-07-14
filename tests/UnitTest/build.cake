@@ -5,6 +5,13 @@
 
 var TARGET = Argument("target", "Default");
 
+var IOS_SIM_NAME = EnvironmentVariable("IOS_SIM_NAME") ?? "iPhone 6";
+var IOS_SIM_RUNTIME = EnvironmentVariable("IOS_SIM_RUNTIME") ?? "iOS 10.3";
+var IOS_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.csproj";
+var IOS_BUNDLE_ID = "uk.co.screenmedia.plugin.vanilla.test.unittest";
+var IOS_IPA_PATH = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/bin/iPhoneSimulator/Release/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.app";
+var IOS_TEST_RESULTS_PATH = "./xunit-ios.xml";
+
 var ANDROID_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.Android/Screenmedia.Plugin.Vanilla.Test.UnitTest.Android.csproj";
 var ANDROID_TEST_RESULTS_PATH = "./xunit-android.xml";
 var ANDROID_AVD = "CABOODLE";
@@ -65,6 +72,77 @@ Action<FilePath, string> AddPlatformToTestResults = (FilePath testResultsFile, s
         FileWriteText(testResultsFile, txt);
     }
 };
+
+Task ("build-ios")
+    .Does (() =>
+{
+    // Setup the test listener config to be built into the app
+    FileWriteText((new FilePath(IOS_PROJ)).GetDirectory().CombineWithFilePath("tests.cfg"), $"{TCP_LISTEN_HOST}:{TCP_LISTEN_PORT}");
+
+    // Nuget restore
+    MSBuild (IOS_PROJ, c => {
+        c.Configuration = "Release";
+        c.Targets.Clear();
+        c.Targets.Add("Restore");
+    });
+
+    // Build the project (with ipa)
+    MSBuild (IOS_PROJ, c => {
+        c.Configuration = "Release";
+        c.Properties["Platform"] = new List<string> { "iPhoneSimulator" };
+        c.Properties["BuildIpa"] = new List<string> { "true" };
+        c.Targets.Clear();
+        c.Targets.Add("Rebuild");
+    });
+});
+
+Task ("test-ios-emu")
+    .IsDependentOn ("build-ios")
+    .Does (() =>
+{
+    // Look for a matching simulator on the system
+    var sim = ListAppleSimulators ()
+        .First (s => (s.Availability.Contains("available") || s.Availability.Contains("booted"))
+                && s.Name == IOS_SIM_NAME && s.Runtime == IOS_SIM_RUNTIME);
+
+    // Boot the simulator
+    Information("Booting: {0} ({1} - {2})", sim.Name, sim.Runtime, sim.UDID);
+    if (!sim.State.ToLower().Contains ("booted"))
+        BootAppleSimulator (sim.UDID);
+
+    // Wait for it to be booted
+    var booted = false;
+    for (int i = 0; i < 100; i++) {
+        if (ListAppleSimulators().Any (s => s.UDID == sim.UDID && s.State.ToLower().Contains("booted"))) {
+            booted = true;
+            break;
+        }
+        System.Threading.Thread.Sleep(1000);
+    }
+
+    // Install the IPA that was previously built
+    var ipaPath = new FilePath(IOS_IPA_PATH);
+    Information ("Installing: {0}", ipaPath);
+    InstalliOSApplication(sim.UDID, MakeAbsolute(ipaPath).FullPath);
+
+    // Start our Test Results TCP listener
+    Information("Started TCP Test Results Listener on port: {0}", TCP_LISTEN_PORT);
+    var tcpListenerTask = DownloadTcpTextAsync (TCP_LISTEN_PORT, IOS_TEST_RESULTS_PATH);
+
+    // Launch the IPA
+    Information("Launching: {0}", IOS_BUNDLE_ID);
+    LaunchiOSApplication(sim.UDID, IOS_BUNDLE_ID);
+
+    // Wait for the TCP listener to get results
+    Information("Waiting for tests...");
+    tcpListenerTask.Wait ();
+
+    AddPlatformToTestResults(IOS_TEST_RESULTS_PATH, "iOS");
+
+    // Close up simulators
+    Information("Closing Simulator");
+    ShutdownAllAppleSimulators ();
+});
 
 
 Task ("build-android")
