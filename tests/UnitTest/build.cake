@@ -5,6 +5,7 @@
 
 var TARGET = Argument("target", "Default");
 
+var IOS_SOLUTION = "../Screenmedia.Plugin.Vanilla.Test.sln";
 var IOS_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.csproj";
 var IOS_BUNDLE_ID = "uk.co.screenmedia.plugin.vanilla.test.unittest";
 var IOS_IPA_PATH = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/bin/iPhoneSimulator/Release/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.app";
@@ -87,7 +88,7 @@ Task ("build-ios")
     });
 
     // Build the project (with ipa)
-    MSBuild (IOS_PROJ, c => {
+    MSBuild (IOS_SOLUTION, c => {
         c.Configuration = "Release";
         c.Properties["Platform"] = new List<string> { "iPhoneSimulator" };
         c.Properties["BuildIpa"] = new List<string> { "true" };
