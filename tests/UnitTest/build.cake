@@ -41,9 +41,7 @@ Func<int, FilePath, Task> DownloadTcpTextAsync = (int port, FilePath filename) =
             }
         });
 
-/*
         try {
-*/
             var tcpClient = tcpListener.AcceptTcpClient();
             var fileName = MakeAbsolute (filename).FullPath;
 
@@ -54,11 +52,9 @@ Func<int, FilePath, Task> DownloadTcpTextAsync = (int port, FilePath filename) =
             tcpClient.Close();
             tcpListener.Stop();
             listening = false; 
-/*
         } catch {
             throw new Exception("Test results listener failed or timed out.");
         }
-*/
     });
 
 Action<FilePath, string> AddPlatformToTestResults = (FilePath testResultsFile, string platformName) => {
