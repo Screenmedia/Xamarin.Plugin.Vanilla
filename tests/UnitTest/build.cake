@@ -5,11 +5,11 @@
 
 var TARGET = Argument("target", "Default");
 
-var IOS_SIM_NAME = EnvironmentVariable("IOS_SIM_NAME") ?? "iPhone 6";
-var IOS_SIM_RUNTIME = EnvironmentVariable("IOS_SIM_RUNTIME") ?? "iOS 10.3";
 var IOS_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.csproj";
 var IOS_BUNDLE_ID = "uk.co.screenmedia.plugin.vanilla.test.unittest";
 var IOS_IPA_PATH = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS/bin/iPhoneSimulator/Release/Screenmedia.Plugin.Vanilla.Test.UnitTest.iOS.app";
+var IOS_SIM_NAME = EnvironmentVariable("IOS_SIM_NAME") ?? "iPhone X";
+var IOS_SIM_RUNTIME = EnvironmentVariable("IOS_SIM_RUNTIME") ?? "iOS 11.4";
 var IOS_TEST_RESULTS_PATH = "./xunit-ios.xml";
 
 var ANDROID_PROJ = "./Screenmedia.Plugin.Vanilla.Test.UnitTest.Android/Screenmedia.Plugin.Vanilla.Test.UnitTest.Android.csproj";
