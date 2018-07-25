@@ -3,6 +3,8 @@
 #addin nuget:?package=Cake.Android.AvdManager&version=1.0.3
 #addin nuget:?package=Cake.FileHelpers
 
+// Original: https://github.com/xamarin/Essentials/blob/cd3b760687ef15670badf51176611b4a11249a59/DeviceTests/build.cake
+
 var TARGET = Argument("target", "Default");
 
 var IOS_SOLUTION = "../Screenmedia.Plugin.Vanilla.Test.sln";
