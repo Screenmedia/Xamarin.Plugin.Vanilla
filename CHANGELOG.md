@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.0-beta.1] - 2018-07-27
+### Changed
+- Migrated from PCL profile 111 to netstandard 1.0
+- Moved away from cake script and bitrise for building the project
+
 ## [0.0.1-beta4] - 2017-03-13
 ### Changed
 - Cake script to output errors and force new changelog format
@@ -30,4 +35,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - First Release
 
-[Unreleased]: https://github.com/Screenmedia/Plugin.Vanilla/compare/v0.0.1-beta4...develop
+[Unreleased]: https://github.com/Screenmedia/Plugin.Vanilla/compare/v0.1.0-beta.1...develop
+[0.1.0-beta.1]: https://github.com/Screenmedia/Plugin.Vanilla/compare/v0.0.1-beta4...v0.1.0-beta.1
