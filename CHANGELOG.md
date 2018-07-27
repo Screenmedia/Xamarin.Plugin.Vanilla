@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Migrated from PCL profile 111 to netstandard 1.0
 - Moved away from cake script and bitrise for building the project
 
+
 ## [0.0.1-beta4] - 2017-03-13
 ### Changed
 - Cake script to output errors and force new changelog format
