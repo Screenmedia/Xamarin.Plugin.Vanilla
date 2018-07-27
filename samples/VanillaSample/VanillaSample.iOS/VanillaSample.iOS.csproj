@@ -82,10 +82,10 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.1.0-beta.1\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.1.0-beta.1\lib\Xamarin.iOS10\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
