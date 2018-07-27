@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="1"
-	android:versionName="1.0"
-	package="uk.co.screenmedia.plugin.vanilla.tests">
+    android:versionCode="1"
+    android:versionName="1.0"
+    package="uk.co.screenmedia.plugin.vanilla.test.unittest">
 
-	<uses-sdk
-		android:minSdkVersion="16"
-		android:targetSdkVersion="23" />
-	
-	<application
-		android:icon="@mipmap/icon"
-		android:label="Vanilla Tests" />
-	
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
+
+    <application
+        android:icon="@mipmap/icon"
+        android:label="Vanilla Unit Tests" />
+
 </manifest>
