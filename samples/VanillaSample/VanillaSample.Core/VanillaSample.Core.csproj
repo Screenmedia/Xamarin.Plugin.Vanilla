@@ -30,10 +30,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Screenmedia.Plugin.Vanilla.Abstractions">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\portable-net45+win8+wpa81\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.1.0-beta.1\lib\netstandard1.0\Screenmedia.Plugin.Vanilla.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Screenmedia.Plugin.Vanilla">
-      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.0.1-beta4\lib\portable-net45+win8+wpa81\Screenmedia.Plugin.Vanilla.dll</HintPath>
+      <HintPath>..\packages\Screenmedia.Plugin.Vanilla.0.1.0-beta.1\lib\netstandard1.0\Screenmedia.Plugin.Vanilla.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
