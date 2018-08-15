@@ -1,5 +1,5 @@
 # Screenmedia Vanilla Plugin Template
-[![Build Status](https://www.bitrise.io/app/970a373b80069b90.svg?token=XJe4yp77fHpLsyWJ5rLMeA&branch=bitrise)](https://www.bitrise.io/app/970a373b80069b90)
+[![Build status](https://screenmedia.visualstudio.com/Mobile/_apis/build/status/Vanilla%20Plugin)](https://screenmedia.visualstudio.com/Mobile/_build/latest?definitionId=74)
 
 Use this as a starting point for creating a plugin. This template is a xamarin plugin but the folder structure should be universal. This Plugin creates an ice cream machine that dispenses different flavours based on the platform.
 
