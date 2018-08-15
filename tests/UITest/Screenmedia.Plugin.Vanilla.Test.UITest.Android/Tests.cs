@@ -1,13 +1,18 @@
-﻿using NUnit.Framework;
-using Xamarin.UITest;
-using Xamarin.UITest.Android;
-
+﻿// -----------------------------------------------------------------------
+//  <copyright file="Tests.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2018. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 namespace Screenmedia.Plugin.Vanilla.Test.UITest.Android
 {
+    using NUnit.Framework;
+    using Xamarin.UITest;
+    using Xamarin.UITest.Android;
+
     [TestFixture]
     public class Tests
     {
-        AndroidApp app;
+        private AndroidApp app;
 
         [SetUp]
         public void BeforeEachTest()
@@ -17,9 +22,8 @@ namespace Screenmedia.Plugin.Vanilla.Test.UITest.Android
             // and select the app projects that should be tested.
             app = ConfigureApp
                 .Android
-                // TODO: Update this path to point to your Android app and uncomment the
-                // code if the app is not included in the solution.
-                .ApkFile ("../../../../TestApp/Screenmedia.Plugin.Vanilla.Test.TestApp.Android/bin/Release/uk.co.screenmedia.plugin.vanilla.test-Signed.apk")
+                //// TODO: Update this path to point to your Android app and uncomment the code if the app is not included in the solution.
+                .ApkFile("../../../../TestApp/Screenmedia.Plugin.Vanilla.Test.TestApp.Android/bin/Release/uk.co.screenmedia.plugin.vanilla.test-Signed.apk")
                 .StartApp();
         }
 

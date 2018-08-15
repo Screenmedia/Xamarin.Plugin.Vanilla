@@ -1,23 +1,24 @@
-using System.Reflection;
-
-using Android.App;
-using Android.OS;
-using Xamarin.Android.NUnitLite;
-
-namespace Screenmedia.Plugin.Vanilla.Test.UnitTest.Android
+// -----------------------------------------------------------------------
+//  <copyright file="MainActivity.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2018. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
+namespace Screenmedia.Plugin.Vanilla.Test.UnitTest
 {
-	[Activity(Label = "Screenmedia.Plugin.Vanilla.Test.UnitTest.Android", MainLauncher = true)]
-	public class MainActivity : TestSuiteActivity
-	{
-		protected override void OnCreate(Bundle bundle)
-		{
-			// tests can be inside the main assembly
-			AddTest(Assembly.GetExecutingAssembly());
-			// or in any reference assemblies
-			// AddTest (typeof (Your.Library.TestClass).Assembly);
+    using System.Reflection;
+    using global::Android.App;
+    using global::Android.OS;
+    using Xunit.Runners.UI;
 
-			// Once you called base.OnCreate(), you cannot add more assemblies.
-			base.OnCreate(bundle);
-		}
-	}
+    [Activity(MainLauncher = true)]
+    public class MainActivity : RunnerActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            AddTestAssembly(Assembly.GetExecutingAssembly());
+
+            // you cannot add more assemblies once calling base
+            base.OnCreate(bundle);
+        }
+    }
 }

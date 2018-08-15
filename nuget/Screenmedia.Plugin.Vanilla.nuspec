@@ -11,21 +11,31 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>Template Plugin</description>
 		<tags>xamarin android ios monodroid monotouch xamarin.android xamarin.ios net net45 netcore plugin screenmedia template vanilla</tags>
-		<iconUrl>https://raw.githubusercontent.com/Screenmedia/Plugin.Vanilla/master/art/icon.png</iconUrl> 
+		<iconUrl>https://raw.githubusercontent.com/Screenmedia/Plugin.Vanilla/master/art/icon.png</iconUrl>
+		<dependencies>
+			<group targetFramework="netstandard1.0">
+				<dependency id="NETStandard.Library" version="1.6.1" />
+			</group>
+			<group targetFramework="portable-net45+win8+wpa81">
+			</group>
+			<group targetFramework="MonoAndroid403">
+			</group>
+			<group targetFramework="Xamarin.iOS10">
+			</group>
+		</dependencies>
+		<releaseNotes>
+			See: https://github.com/Screenmedia/Plugin.Vanilla/blob/master/CHANGELOG.md
+		</releaseNotes>
 	</metadata>
-	<files>		
-		<!-- PCL -->
-		<file src="src/Screenmedia.Plugin.Vanilla/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/portable-net45+win8+wpa81/Screenmedia.Plugin.Vanilla.dll" />
-		<file src="src/Screenmedia.Plugin.Vanilla.Abstractions/bin/Release/Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib/portable-net45+win8+wpa81/Screenmedia.Plugin.Vanilla.Abstractions.dll" />
+	<files>
+		<!-- NetStandard/PCL -->
+		<file src="src/Screenmedia.Plugin.Vanilla/bin/Release/netstandard1.0/Screenmedia.Plugin.Vanilla.*" target="lib/netstandard1.0" />
 
 		<!-- android -->
-		<file src="src/Screenmedia.Plugin.Vanilla.Android/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/MonoAndroid403/Screenmedia.Plugin.Vanilla.dll" />
-		<file src="src/Screenmedia.Plugin.Vanilla.Abstractions/bin/Release/Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib/MonoAndroid403/Screenmedia.Plugin.Vanilla.Abstractions.dll" />
+		<file src="src/Screenmedia.Plugin.Vanilla.Android/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/MonoAndroid403" />
 
 		<!-- iOS -->
-		<file src="src/Screenmedia.Plugin.Vanilla.iOS/bin/Release/Screenmedia.Plugin.Vanilla.dll" target="lib/Xamarin.iOS10/Screenmedia.Plugin.Vanilla.dll" />
-		<file src="src/Screenmedia.Plugin.Vanilla.Abstractions/bin/Release/Screenmedia.Plugin.Vanilla.Abstractions.dll" target="lib/Xamarin.iOS10/Screenmedia.Plugin.Vanilla.Abstractions.dll" />
-
+		<file src="src/Screenmedia.Plugin.Vanilla.iOS/bin/Release/Screenmedia.Plugin.Vanilla.*" target="lib/Xamarin.iOS10" />
 	</files>
 </package>
 

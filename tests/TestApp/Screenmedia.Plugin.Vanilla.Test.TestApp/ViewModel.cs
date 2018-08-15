@@ -1,17 +1,23 @@
-﻿using Screenmedia.Plugin.Vanilla.Abstractions;
+﻿// -----------------------------------------------------------------------
+//  <copyright file="ViewModel.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2018. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 
 namespace Screenmedia.Plugin.Vanilla.Test.TestApp
 {
-	public class ViewModel
-	{
-		private IIceCreamMachine _iceCreamMachine;
+    using Screenmedia.Plugin.Vanilla.Abstractions;
 
-		public ViewModel()
-		{
-			_iceCreamMachine = CrossIceCreamMachine.Current;
-			IceCreamFlavour = _iceCreamMachine.Dispense();
-		}
+    public class ViewModel
+    {
+        private IIceCreamMachine _iceCreamMachine;
 
-		public string IceCreamFlavour { get; set; } = "Empty Cone";
-	}
+        public ViewModel()
+        {
+            _iceCreamMachine = CrossIceCreamMachine.Current;
+            IceCreamFlavour = _iceCreamMachine.Dispense();
+        }
+
+        public string IceCreamFlavour { get; set; } = "Empty Cone";
+    }
 }

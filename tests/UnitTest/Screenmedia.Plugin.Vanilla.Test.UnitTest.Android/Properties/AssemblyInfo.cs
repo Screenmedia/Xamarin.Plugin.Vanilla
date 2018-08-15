@@ -1,3 +1,8 @@
+// -----------------------------------------------------------------------
+//  <copyright file="AssemblyInfo.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2018. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Android.App;
@@ -6,11 +11,11 @@ using Android.App;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Screenmedia.Plugin.Vanilla.Test.UnitTest.Android")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Vanilla Plugin Unit Tests")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Screenmedia")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("b099l3")]
+[assembly: AssemblyCopyright("Copyright © Screenmedia Design Ltd")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,5 +28,5 @@ using Android.App;
 // The following attributes are used to specify the signing key for the assembly, 
 // if desired. See the Mono documentation for more information about signing.
 
-//[assembly: AssemblyDelaySign(false)]
-//[assembly: AssemblyKeyFile("")]
+// [assembly: AssemblyDelaySign(false)]
+// [assembly: AssemblyKeyFile("")]

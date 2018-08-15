@@ -1,13 +1,18 @@
-﻿using NUnit.Framework;
-using Xamarin.UITest;
-using Xamarin.UITest.iOS;
-
+﻿// -----------------------------------------------------------------------
+//  <copyright file="Tests.cs" company="Screenmedia">
+//      Copyright (c) Screenmedia 2018. All rights reserved.
+//  </copyright>
+// -----------------------------------------------------------------------
 namespace Screenmedia.Plugin.Vanilla.Test.UITest.iOS
 {
+    using NUnit.Framework;
+    using Xamarin.UITest;
+    using Xamarin.UITest.iOS;
+
     [TestFixture]
     public class Tests
     {
-        iOSApp app;
+        private iOSApp app;
 
         [SetUp]
         public void BeforeEachTest()
@@ -25,9 +30,8 @@ namespace Screenmedia.Plugin.Vanilla.Test.UITest.iOS
             //    #endif
             app = ConfigureApp
                 .iOS
-                // TODO: Update this path to point to your iOS app and uncomment the
-                // code if the app is not included in the solution.
-                .AppBundle ("../../../../TestApp/Screenmedia.Plugin.Vanilla.Test.TestApp.iOS/bin/iPhoneSimulator/Debug/Screenmedia.Plugin.Vanilla.Test.TestApp.iOS.app")
+                //// TODO: Update this path to point to your iOS app and uncomment the code if the app is not included in the solution.
+                .AppBundle("../../../../TestApp/Screenmedia.Plugin.Vanilla.Test.TestApp.iOS/bin/iPhoneSimulator/Debug/Screenmedia.Plugin.Vanilla.Test.TestApp.iOS.app")
                 .StartApp();
         }
 
@@ -35,7 +39,6 @@ namespace Screenmedia.Plugin.Vanilla.Test.UITest.iOS
         public void DispenseCorrectIceCream()
         {
             app.WaitForElement(c => c.Marked("Strawberry").Class("UILabel"));
-
         }
     }
 }
