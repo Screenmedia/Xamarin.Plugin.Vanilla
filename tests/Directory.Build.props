@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <TreatWarningsAsErrors Condition="'$(Configuration)'!='Debug'">true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Screenmedia.StyleCop" Version="0.1.0-beta.1" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>
