@@ -11,8 +11,9 @@ namespace VanillaSample.iOS
 
     public partial class ViewController : UIViewController
     {
-        protected ViewController(IntPtr handle) : base(handle)
-        { 
+        protected ViewController(IntPtr handle)
+            : base(handle)
+        {
         }
 
         public override void ViewDidLoad()

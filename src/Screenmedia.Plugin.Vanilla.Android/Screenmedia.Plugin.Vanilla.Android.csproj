@@ -34,7 +34,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,11 +54,6 @@
       <Project>{88E53FD9-91CC-486A-B815-837B7E55132C}</Project>
       <Name>Screenmedia.Plugin.Vanilla.Abstractions</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="StyleCop.MSBuild" Version="5.0.0">
-        <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
   </ItemGroup>
   <Import Project="..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems" Label="Shared" Condition="Exists('..\Screenmedia.Plugin.Vanilla.Shared\Screenmedia.Plugin.Vanilla.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
